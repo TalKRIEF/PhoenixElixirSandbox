@@ -9,3 +9,12 @@ defmodule PhoenixElixirSandbox.Playground do
   def extract_id(%{"id" => id}), do: {:ok, id}
   def extract_id(_), do: {:error, :no_id} # Can replace :no_id by string "No ID if wanted"
 end
+
+defmodule PhoenixElixirSandbox.Pipeline do
+  def normalize_url(url) do
+    url
+    |> String.trim()
+    |> String.downcase()
+    |> String.replace("watch?v=", "embed/")
+  end
+end
