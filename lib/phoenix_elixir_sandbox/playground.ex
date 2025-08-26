@@ -3,3 +3,6 @@ defmodule PhoenixElixirSandbox.Playground do
     {:ok, %{head: head, tail: tail}}
   end
 end
+
+result = PhoenixElixirSandbox.Playground.head_and_tail([1,2,3])
+IO.puts(result)
