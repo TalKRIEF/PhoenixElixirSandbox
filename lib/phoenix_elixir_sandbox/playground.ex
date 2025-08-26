@@ -5,4 +5,7 @@ defmodule PhoenixElixirSandbox.Playground do
 
   def unwrap({:ok, value}), do: value
   def unwrap({:error, msg}), do: "Error, #{msg}"
+
+  def extract_id(%{"id" => id}), do: {:ok, id}
+  def extract_id(_), do: {:error, :no_id} # Can replace :no_id by string "No ID if wanted"
 end
