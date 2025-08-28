@@ -7,7 +7,7 @@ defmodule PhoenixElixirSandbox.Playground do
   def unwrap({:error, msg}), do: "Error, #{msg}"
 
   def extract_id(%{"id" => id}), do: {:ok, id}
-  def extract_id(_), do: {:error, :no_id} # Can replace :no_id by string  ie "No ID if wanted "
+  def extract_id(_), do: {:error, :no_id}
 end
 
 defmodule PhoenixElixirSandbox.Pipeline do
