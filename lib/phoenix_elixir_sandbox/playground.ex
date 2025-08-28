@@ -19,9 +19,9 @@ defmodule PhoenixElixirSandbox.Pipeline do
   end
 end
 
-defmodule MyMaps.Variables do
+defmodule PhoenixElixirSandbox.Variables do
   def first_map do
     map = %{a: 1, b: 2}
-    IO.puts(map)
+    IO.puts("#{map}")
   end
 end
