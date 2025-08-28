@@ -20,7 +20,8 @@ defmodule PhoenixElixirSandbox.Pipeline do
 end
 
 defmodule PhoenixElixirSandbox.Variables do
-  def first_map do
-    map = %{a: 1, b: 2}
+  def first_map(map) do
+    map
+    |> Map.values()
   end
 end
