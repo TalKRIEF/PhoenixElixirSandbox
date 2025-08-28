@@ -7,7 +7,7 @@ defmodule PhoenixElixirSandbox.Playground do
   def unwrap({:error, msg}), do: "Error, #{msg}"
 
   def extract_id(%{"id" => id}), do: {:ok, id}
-  def extract_id(_), do: {:error, :no_id} # Can replace :no_id by string "No ID if wanted"
+  def extract_id(_), do: {:error, :no_id} # Can replace :no_id by string  ie "No ID if wanted "
 end
 
 defmodule PhoenixElixirSandbox.Pipeline do
@@ -16,5 +16,11 @@ defmodule PhoenixElixirSandbox.Pipeline do
     |> String.trim()
     |> String.downcase()
     |> String.replace("watch?v=", "embed/")
+  end
+end
+
+defmodule MyMaps.Variables do
+  def first_map do
+    _map = %{a: 1, b: 2}
   end
 end
