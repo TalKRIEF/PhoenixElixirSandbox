@@ -21,6 +21,7 @@ end
 
 defmodule MyMaps.Variables do
   def first_map do
-    _map = %{a: 1, b: 2}
+    map = %{a: 1, b: 2}
+    IO.puts(map)
   end
 end
