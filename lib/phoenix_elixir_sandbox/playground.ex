@@ -22,6 +22,5 @@ end
 defmodule PhoenixElixirSandbox.Variables do
   def first_map do
     map = %{a: 1, b: 2}
-    IO.puts("#{map}")
   end
 end
