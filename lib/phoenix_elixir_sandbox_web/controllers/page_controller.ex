@@ -4,4 +4,8 @@ defmodule PhoenixElixirSandboxWeb.PageController do
   def home(conn, _params) do
     render(conn, :home)
   end
+
+  def random(conn, _params) do
+    render(conn, :random)
+  end
 end

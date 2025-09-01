@@ -2,7 +2,7 @@ defmodule PhoenixElixirSandboxWeb.Router do
   use PhoenixElixirSandboxWeb, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
+    plug :accepts, ["html", "json"]
     plug :fetch_session
     plug :fetch_live_flash
     plug :put_root_layout, html: {PhoenixElixirSandboxWeb.Layouts, :root}
@@ -18,6 +18,7 @@ defmodule PhoenixElixirSandboxWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/random", PageController, :random
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
     get "/newroute", NewrouteController, :index
