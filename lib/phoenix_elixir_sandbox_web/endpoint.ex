@@ -56,7 +56,7 @@ defmodule PhoenixElixirSandboxWeb.Endpoint do
 
   def introspect(conn, _opts) do
     IO.puts """
-    Texte:  Salut TK, bienvenue dans le PLug
+    Texte:  Salut TK, bienvenue dans le plug, équivalent de init
     Verb: #{inspect(conn.method)}
     Host: #{inspect(conn.host)}
     Headers: #{inspect(conn.req_headers)}
