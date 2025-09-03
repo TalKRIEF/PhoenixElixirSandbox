@@ -23,6 +23,8 @@ defmodule PhoenixElixirSandboxWeb.Router do
     get "/hello/:messenger", HelloController, :show
     get "/newroute", NewrouteController, :index
     get "/newroute/:name", NewrouteController, :show
+    get "/chatroom", ChatroomController, :index
+
   end
 
   # Other scopes may use custom stacks.
