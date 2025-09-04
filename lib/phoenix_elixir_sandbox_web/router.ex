@@ -19,8 +19,7 @@ defmodule PhoenixElixirSandboxWeb.Router do
 
     get "/", PageController, :home
     get "/random", PageController, :random
-    get "/hello", HelloController, :index
-    get "/hello/:messenger", HelloController, :show
+
 
   end
 
