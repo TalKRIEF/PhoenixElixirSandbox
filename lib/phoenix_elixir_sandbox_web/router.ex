@@ -18,8 +18,7 @@ defmodule PhoenixElixirSandboxWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/random", PageController, :random
-
+    get "/testplay", PageController, :testplay
 
   end
 
