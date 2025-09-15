@@ -19,6 +19,7 @@ defmodule PhoenixElixirSandboxWeb.Router do
 
     get "/", PageController, :home
     get "/testplay", PageController, :testplay
+    resources "/users", UserController
 
   end
 
