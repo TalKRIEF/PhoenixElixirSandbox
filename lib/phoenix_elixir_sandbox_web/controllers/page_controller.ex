@@ -1,6 +1,9 @@
 defmodule PhoenixElixirSandboxWeb.PageController do
   use PhoenixElixirSandboxWeb, :controller
 
+  def index do
+    Repo.all(User)
+  end
   def home(conn, _params) do
     render(conn, :home)
   end
