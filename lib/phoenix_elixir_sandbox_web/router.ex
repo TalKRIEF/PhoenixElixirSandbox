@@ -18,10 +18,7 @@ defmodule PhoenixElixirSandboxWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/testplay", PageController, :testplay
-    get "/chatroom/:id", ChatroomController, :show
-    resources "/users", UserController
-
+    resources "/users", UserController, except: [:delete]
 
   end
 
