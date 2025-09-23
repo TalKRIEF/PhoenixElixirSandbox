@@ -300,7 +300,7 @@ defmodule PhoenixElixirSandboxWeb.CoreComponents do
       <div class="flex-none">{render_slot(@actions)}</div>
     </header>
     """
-  end
+  end #Comp
 
   @doc """
   Renders a table with generic styling.
