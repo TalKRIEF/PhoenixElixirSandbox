@@ -19,6 +19,8 @@ defmodule PhoenixElixirSandboxWeb.Router do
 
     get "/", PageController, :home
     resources "/users", UserController, except: [:delete]
+    resources "/chatrooms", ChatroomController
+
 
   end
 
