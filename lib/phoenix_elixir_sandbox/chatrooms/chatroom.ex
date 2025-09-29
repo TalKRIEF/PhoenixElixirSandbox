@@ -13,8 +13,8 @@ defmodule PhoenixElixirSandbox.Chatrooms.Chatroom do
   @doc false
   def changeset(chatroom, attrs) do
     chatroom
-    |> cast(attrs, [:title, :video_link])
-    |> validate_required([:title, :video_link])
+    |> cast(attrs, [:title, :video_link, :user_id])
+    |> validate_required([:title, :video_link, :user_id])
+    |> foreign_key_constraint(:user_id)
   end
-
 end

@@ -22,6 +22,15 @@ defmodule PhoenixElixirSandboxWeb.ChatroomLive.Index do
         row_click={fn {_id, chatroom} -> JS.navigate(~p"/chatrooms/#{chatroom}") end}
       >
         <:col :let={{_id, chatroom}} label="Title">{chatroom.title}</:col>
+
+        <:col :let={{_id, chatroom}} label="Creator">
+          <%= if chatroom.user do %>
+            {chatroom.user.name}
+          <% else %>
+            <span class="text-gray-400 italic">Aucun utilisateur</span>
+          <% end %>
+        </:col>
+
         <:col :let={{_id, chatroom}} label="Video link">{chatroom.video_link}</:col>
         <:action :let={{_id, chatroom}}>
           <div class="sr-only">
@@ -44,10 +53,12 @@ defmodule PhoenixElixirSandboxWeb.ChatroomLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
+    chatrooms = Chatrooms.list_chatrooms() |> PhoenixElixirSandbox.Repo.preload(:user)
+
     {:ok,
      socket
      |> assign(:page_title, "Listing Chatrooms")
-     |> stream(:chatrooms, Chatrooms.list_chatrooms())}
+     |> stream(:chatrooms, chatrooms)}
   end
 
   @impl true

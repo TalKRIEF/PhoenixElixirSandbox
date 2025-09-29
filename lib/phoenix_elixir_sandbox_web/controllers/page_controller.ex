@@ -3,6 +3,7 @@ defmodule PhoenixElixirSandboxWeb.PageController do
 
   def index do
   end
+
   def home(conn, _params) do
     render(conn, :home)
   end

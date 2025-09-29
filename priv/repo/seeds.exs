@@ -13,12 +13,23 @@
 alias PhoenixElixirSandbox.Accounts
 alias PhoenixElixirSandbox.Repo
 
-
 Repo.delete_all(PhoenixElixirSandbox.User)
-IO.puts("________________________________________________All Users have been deleted___________________________________________")
-IO.puts("________________________________________________All Users have been deleted___________________________________________")
-IO.puts("________________________________________________All Users have been deleted___________________________________________")
-IO.puts("________________________________________________All Users have been deleted___________________________________________")
+
+IO.puts(
+  "________________________________________________All Users have been deleted___________________________________________"
+)
+
+IO.puts(
+  "________________________________________________All Users have been deleted___________________________________________"
+)
+
+IO.puts(
+  "________________________________________________All Users have been deleted___________________________________________"
+)
+
+IO.puts(
+  "________________________________________________All Users have been deleted___________________________________________"
+)
 
 Accounts.create_user(%{name: "Chloé", email: "chloe@yahoo.fr", password: "talouleplusbeau"})
 IO.puts("................................Chloé user created................................")

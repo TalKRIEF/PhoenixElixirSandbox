@@ -7,6 +7,8 @@ defmodule PhoenixElixirSandbox.Accounts.User do
     field :email, :string
     field :password, :string
 
+    has_many :chatrooms, PhoenixElixirSandbox.Chatrooms.Chatroom
+
     timestamps(type: :utc_datetime)
   end
 

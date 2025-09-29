@@ -10,7 +10,8 @@ defmodule PhoenixElixirSandbox.Application do
     children = [
       PhoenixElixirSandboxWeb.Telemetry,
       PhoenixElixirSandbox.Repo,
-      {DNSCluster, query: Application.get_env(:phoenix_elixir_sandbox, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:phoenix_elixir_sandbox, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: PhoenixElixirSandbox.PubSub},
       # Start a worker by calling: PhoenixElixirSandbox.Worker.start_link(arg)
       # {PhoenixElixirSandbox.Worker, arg},

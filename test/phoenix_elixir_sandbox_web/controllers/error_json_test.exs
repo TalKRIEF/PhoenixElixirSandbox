@@ -2,7 +2,9 @@ defmodule PhoenixElixirSandboxWeb.ErrorJSONTest do
   use PhoenixElixirSandboxWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert PhoenixElixirSandboxWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert PhoenixElixirSandboxWeb.ErrorJSON.render("404.json", %{}) == %{
+             errors: %{detail: "Not Found"}
+           }
   end
 
   test "renders 500" do

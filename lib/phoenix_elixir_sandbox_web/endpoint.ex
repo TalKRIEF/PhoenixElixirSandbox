@@ -47,20 +47,20 @@ defmodule PhoenixElixirSandboxWeb.Endpoint do
     pass: ["*/*"],
     json_decoder: Phoenix.json_library()
 
-    plug Plug.MethodOverride
-    plug Plug.Head
-    plug Plug.Session, @session_options
-    plug :introspect
+  plug Plug.MethodOverride
+  plug Plug.Head
+  plug Plug.Session, @session_options
+  plug :introspect
 
   plug PhoenixElixirSandboxWeb.Router
 
   def introspect(conn, _opts) do
-    IO.puts """
+    IO.puts("""
     Texte:  Salut TK, bienvenue dans le plug, équivalent de init
     Verb: #{inspect(conn.method)}
     Host: #{inspect(conn.host)}
     Headers: #{inspect(conn.req_headers)}
-    """
+    """)
 
     conn
   end

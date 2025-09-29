@@ -19,9 +19,14 @@ defmodule PhoenixElixirSandboxWeb.Router do
 
     get "/", PageController, :home
     resources "/users", UserController, except: [:delete]
-    resources "/chatrooms", ChatroomController
 
+    live "/chatrooms", ChatroomLive.Index, :index
+    live "/chatrooms/new", ChatroomLive.Form, :new
+    live "/chatrooms/:id/edit", ChatroomLive.Form, :edit
+    live "/chatrooms/:id/delete", ChatroomLive.Index, :delete
 
+    live "/chatrooms/:id", ChatroomLive.Show, :show
+    live "/chatrooms/:id/show/edit", ChatroomLive.Form, :edit
   end
 
   # Other scopes may use custom stacks.

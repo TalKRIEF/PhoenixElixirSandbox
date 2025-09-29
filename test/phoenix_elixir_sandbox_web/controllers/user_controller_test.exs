@@ -4,7 +4,11 @@ defmodule PhoenixElixirSandboxWeb.UserControllerTest do
   import PhoenixElixirSandbox.AccountsFixtures
 
   @create_attrs %{name: "some name", password: "some password", email: "some email"}
-  @update_attrs %{name: "some updated name", password: "some updated password", email: "some updated email"}
+  @update_attrs %{
+    name: "some updated name",
+    password: "some updated password",
+    email: "some updated email"
+  }
   @invalid_attrs %{name: nil, password: nil, email: nil}
 
   describe "index" do
