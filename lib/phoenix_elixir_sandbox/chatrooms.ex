@@ -5,7 +5,6 @@ defmodule PhoenixElixirSandbox.Chatrooms do
 
   import Ecto.Query, warn: false
   alias PhoenixElixirSandbox.Repo
-
   alias PhoenixElixirSandbox.Chatrooms.Chatroom
 
   @doc """
@@ -18,7 +17,9 @@ defmodule PhoenixElixirSandbox.Chatrooms do
 
   """
   def list_chatrooms do
-    Repo.all(Chatroom)
+    Chatroom
+    |> Repo.all()
+    |> Repo.preload(:user)
   end
 
   @doc """

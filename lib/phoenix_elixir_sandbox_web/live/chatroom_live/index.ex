@@ -53,11 +53,11 @@ defmodule PhoenixElixirSandboxWeb.ChatroomLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    chatrooms = Chatrooms.list_chatrooms() |> PhoenixElixirSandbox.Repo.preload(:user)
+    chatrooms = Chatrooms.list_chatrooms()
 
     {:ok,
      socket
-     |> assign(:page_title, "Listing Chatrooms")
+     |> assign(:page_title, "Chatroom Index")
      |> stream(:chatrooms, chatrooms)}
   end
 
