@@ -1,0 +1,11 @@
+Violet foncé : 1 + 1 + 1 + 1 + 1 + 1 + 1
+
+violet clair : 1 + 1 + 1 + 1
+
+bleu : 1 + 1 + 1 + 1 + 1 + 1 + 1
+
+vert foncé : 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+
+jaune : 1 + 1
+
+rose : 1 + 1
